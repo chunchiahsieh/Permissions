@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Z167BQYLQFn+pH/UFXpNIjKoh9gDMWWtHCzmfRLDexchW8I4g2mw4S0InhI4Z9snkBmLdTNlQyv1utLU92QLpg==",
+  "dgSpecHash": "b/zTS0d5UDtSWHrfYtIjA6vM0XlBHcO+UREJGv5ADSWr1qRQEiGHF9d1hd4eAxF0pFPixvBroduKzQ5tXf8cIA==",
   "success": true,
-  "projectFilePath": "C:\\Disk F\\Aga\\SSO\\backend\\SSO.csproj",
+  "projectFilePath": "C:\\Disk F\\Aga\\Permissions\\backend\\SSO.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

@@ -1,0 +1,13 @@
+{
+    "SSO": {
+      "url": "http://localhost:5173",
+      "login": "http://localhost:5173"
+    },
+    "Permissions": {
+      "url": "http://localhost:5174/"
+    },
+    "Theme": {
+      "primaryColor": "#4CAF50",
+      "secondaryColor": "#FF5733"
+    }
+  }

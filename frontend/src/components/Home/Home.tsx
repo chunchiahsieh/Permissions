@@ -2,12 +2,15 @@
 import {
   Box,
 } from '@mui/material';
-
+import { jwtDecode } from 'jwt-decode';
 export interface HomeProps {
   prop?: string;
 }
 
-export function Home({prop = 'default value'}: HomeProps) {
+export function Home({}: HomeProps) {
+ 
+  const token = localStorage.getItem("token");
+  console.log(token?jwtDecode(token):"");
   return (
     <Box sx={{ display: 'flex', height: '100vh' }}>
       {/* 左側選單 */}
@@ -15,9 +18,7 @@ export function Home({prop = 'default value'}: HomeProps) {
 
        {/* 在左上角加入一個 IconButton 用來切換右側選單狀態 */}
        <Box sx={{ display: 'flex', justifyContent: 'flex-end', mb: 1 }}>
-            
           </Box>
-
       </Box>
 
 
