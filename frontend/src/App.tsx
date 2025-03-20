@@ -2,8 +2,9 @@
 import {Home} from './components/Home/index';
 import {Login} from './components/Login/index';
 import {ClearToken} from './components/ClearToken/index';
-import {  Route, Routes,Navigate ,useNavigate  } from 'react-router-dom';
-import React, { useEffect } from 'react';
+import { Route, Routes, useNavigate  } from 'react-router-dom';
+import { useEffect } from 'react';
+import config from "../src/config.json";
 
 function App() {
   const navigate = useNavigate();
@@ -18,11 +19,20 @@ function App() {
     console.log("token"+token);
     if(token){
       localStorage.setItem('token', token);
-      console.log("Home");
-     navigate("/Home");
+       // 等待一點時間再跳轉（可以利用 setTimeout 等待一個短暫的時間）
+      setTimeout(() => {
+        console.log("Redirecting to Home");
+        navigate("/Home");
+      }, 10000);
     }
-    console.log("login");
-    navigate("/");
+
+    setTimeout(() => {
+      console.log("login");
+      const currentUrl = window.location.href;
+      const ssoLoginUrl = `${config.SSO.login}?redirectUrl=${encodeURIComponent(currentUrl)}`;
+      window.location.href = ssoLoginUrl; // 自動跳轉到 SSO 登入頁面
+    }, 10000);
+    
   }, []);
 
   return (
